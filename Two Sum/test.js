@@ -1,7 +1,7 @@
 import assert from 'assert';
 import { twoSum } from './index.js';
 
-describe('Two Sum', () => {
+describe('Two Sum: Brute Force', () => {
   
   it('should return [0,1] for nums=[2,7,11,15] and target=9 (Example 1)', () => {
     const nums = [2,7,11,15];

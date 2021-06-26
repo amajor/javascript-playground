@@ -38,3 +38,25 @@ Output: [0,1]
 -109 <= target <= 109
 Only one valid answer exists.
 ```
+
+## Follow-Up
+
+Can you come up with an algorithm that is less than O(n2) time complexity?
+
+# Explanations
+
+## Approach 1: Brute Force
+
+The brute force approach is straight-forward and a natural initial solution.
+
+Loop through each element `x` and find if there is another value equal to `target - x`.
+
+If there is, return those two values.
+
+### Complexity Analysis
+
+Time complexity: `O(n^2)`
+
+For each element, we try to find its complement by looping through the rest of array which takes `O(n)` time. Therefore, the time complexity is `O(n^2)`.
+
+Space complexity: `O(1)`.
