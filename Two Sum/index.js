@@ -2,7 +2,7 @@ const twoSum = (nums, target) => {
   for (let i = 0; i < nums.length; i += 1) {
     for (let j = i + 1; j < nums.length; j += 1) {
       if (nums[j] === target - nums[i]) {
-          return [i, j];
+        return [i, j];
       }
     }
   }
@@ -12,7 +12,7 @@ const twoSum = (nums, target) => {
 };
 
 const twoSumTwoPassHash = (nums, target) => {
-  let map = new Map();
+  const map = new Map();
 
   // First iteration, setting the values to the hash table
   for (let i = 0; i < nums.length; i += 1) {
@@ -32,12 +32,12 @@ const twoSumTwoPassHash = (nums, target) => {
 };
 
 const twoSumOnePassHash = (nums, target) => {
-  let map = new Map();
+  const map = new Map();
 
   for (let i = 0; i < nums.length; i += 1) {
     const complement = target - nums[i];
     if (map.has(complement)) {
-      return [map.get(complement), i]
+      return [map.get(complement), i];
     }
     map.set(nums[i], i);
   }
@@ -50,4 +50,4 @@ export {
   twoSum,
   twoSumTwoPassHash,
   twoSumOnePassHash,
-}
+};
