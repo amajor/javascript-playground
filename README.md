@@ -1,4 +1,5 @@
-![Test Workflow](https://github.com/amajor/javascript-playground/actions/workflows/tests.yml/badge.svg)
+[![Tests](https://github.com/amajor/javascript-playground/actions/workflows/tests.yml/badge.svg)](https://github.com/amajor/javascript-playground/actions/workflows/tests.yml)
+[![ESLint](https://github.com/amajor/javascript-playground/actions/workflows/lint.yml/badge.svg)](https://github.com/amajor/javascript-playground/actions/workflows/lint.yml)
 
 # JavaScript Playground
 
