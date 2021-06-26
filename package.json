@@ -1,0 +1,15 @@
+{
+  "name": "javascript-playground",
+  "version": "1.0.0",
+  "description": "A place to solve a variety of JavaScript puzzles",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "Alison Major",
+  "devDependencies": {
+    "mocha": "^9.0.1"
+  }
+}
