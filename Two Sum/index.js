@@ -31,7 +31,13 @@ const twoSumTwoPassHash = (nums, target) => {
   throw new Error(`A solution does not exist in the set ${nums} for target ${target}.`);
 };
 
+const twoSumOnePassHash = (nums, target) => {
+  // Throw an error if the solution does not exist.
+  throw new Error(`A solution does not exist in the set ${nums} for target ${target}.`);
+};
+
 export {
   twoSum,
   twoSumTwoPassHash,
+  twoSumOnePassHash,
 }
