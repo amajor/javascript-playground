@@ -43,4 +43,15 @@ describe('Two Sum', () => {
     assert.deepStrictEqual(actual, expected);
   });
 
+  it('should throw an error if a solution does not exist', () => {
+    const nums = [1,2,3,4];
+    const target = 2;
+
+    assert.throws(
+      () => twoSum(nums, target),
+      /^Error: A solution does not exist in the set*/
+    );
+
+  })
+
 });

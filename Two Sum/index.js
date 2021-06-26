@@ -9,13 +9,15 @@ export const twoSum = (nums, target) => {
 
     if (valueOne + valueTwo === target) {
       indexTwo = i;
-      break;
+      return [indexOne, indexTwo];
     } else if (i === nums.length - 1 && indexOne !== nums.length - 2) {
       i = indexTwo;
       indexOne = indexTwo;
       indexTwo += 1;
+      continue;
     }
-}
+  }
 
-  return [indexOne, indexTwo];
+  // Throw an error if the solution does not exist.
+  throw new Error(`A solution does not exist in the set ${nums} for target ${target}.`);
 };
