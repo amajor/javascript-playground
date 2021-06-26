@@ -1,3 +1,5 @@
+![Test Workflow](https://github.com/amajor/javascript-playground/actions/workflows/tests.yml/badge.svg)
+
 # JavaScript Playground
 
 ## File Structure
