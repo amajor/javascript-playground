@@ -18,6 +18,7 @@
            {
              "js": "always"
            }
-        ]
+        ],
+        "import/prefer-default-export": "warn"
      }
 }
