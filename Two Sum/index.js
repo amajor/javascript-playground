@@ -32,6 +32,16 @@ const twoSumTwoPassHash = (nums, target) => {
 };
 
 const twoSumOnePassHash = (nums, target) => {
+  let map = new Map();
+
+  for (let i = 0; i < nums.length; i += 1) {
+    const complement = target - nums[i];
+    if (map.has(complement)) {
+      return [map.get(complement), i]
+    }
+    map.set(nums[i], i);
+  }
+
   // Throw an error if the solution does not exist.
   throw new Error(`A solution does not exist in the set ${nums} for target ${target}.`);
 };
