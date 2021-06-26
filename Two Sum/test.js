@@ -33,4 +33,14 @@ describe('Two Sum', () => {
     assert.deepStrictEqual(actual, expected);
   });
 
+  it('should return [1,3] for nums=[2,7,11,15] and target=22', () => {
+    const nums = [2,7,11,15];
+    const target = 22;
+    
+    const expected = [1,3];
+    const actual = twoSum(nums, target);
+
+    assert.deepStrictEqual(actual, expected);
+  });
+
 });

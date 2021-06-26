@@ -3,8 +3,9 @@ export const twoSum = (nums, target) => {
   let indexTwo = 1;
   
   for (let i = indexTwo; i < nums.length; i += 1) {
+    
     const valueOne = nums[indexOne];
-    const valueTwo = nums[indexTwo];
+    const valueTwo = nums[i];
 
     if (valueOne + valueTwo === target) {
       indexTwo = i;
