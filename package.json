@@ -11,5 +11,6 @@
   "author": "Alison Major",
   "devDependencies": {
     "mocha": "^9.0.1"
-  }
+  },
+  "type":"module"
 }
