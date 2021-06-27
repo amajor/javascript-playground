@@ -36,5 +36,24 @@ describe('Reverse Integer', () => {
     );
   });
 
-  it('should throw an error if the input is not an integer');
+  it('should throw an error if the input is not an integer', () => {
+    const theFloat = 1.2;
+    const theString = 'hello world';
+    const theArray = [0, 1.2, 'hellow world'];
+
+    assert.throws(
+      () => reverseInteger(theFloat),
+      /^Error: Input is not an integer.*/,
+    );
+
+    assert.throws(
+      () => reverseInteger(theString),
+      /^Error: Input is not an integer.*/,
+    );
+
+    assert.throws(
+      () => reverseInteger(theArray),
+      /^Error: Input is not an integer.*/,
+    );
+  });
 });
