@@ -10,6 +10,8 @@ describe.only('Palindrome Integer', () => {
 
   it('should return false if the input is -101');
 
+  it('should return false if the input is not an integer');
+
   it('should throw an error if the input is below the minimum inclusive value', () => {
     const minInclusiveRange = -(2 ** 31);
     const input = minInclusiveRange - 1;
