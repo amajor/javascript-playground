@@ -34,7 +34,22 @@ describe.only('Palindrome Integer', () => {
     assert.strictEqual(actual, expected);
   });
 
-  it('should return false if the input is not an integer');
+  it('should return false if the input is not an integer', () => {
+    const theFloat = 1.2;
+    const theString = 'hello world';
+    const theArray = [0, 1.2, 'hellow world'];
+    const theObject = {};
+    const theFunction = () => { console.log('hello world'); };
+    const expected = false;
+
+    assert.strictEqual(palindromeInteger(theFloat), expected);
+    assert.strictEqual(palindromeInteger(theString), expected);
+    assert.strictEqual(palindromeInteger(theArray), expected);
+    assert.strictEqual(palindromeInteger(theObject), expected);
+    assert.strictEqual(palindromeInteger(theFunction), expected);
+    assert.strictEqual(palindromeInteger(null), expected);
+    assert.strictEqual(palindromeInteger(undefined), expected);
+  });
 
   it('should throw an error if the input is below the minimum inclusive value', () => {
     const minInclusiveRange = -(2 ** 31);
