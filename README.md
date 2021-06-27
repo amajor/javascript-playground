@@ -3,6 +3,9 @@
 
 # JavaScript Playground
 
+* [File Structure](#file-structure)
+* [Exercises](#exercises)
+
 ## File Structure
 
 We have a simple script to make file creation simple:
@@ -33,7 +36,7 @@ Function Name (in "pascalCase", please): sampleFunction
 
 These files can have `npm run lint` and `npm test` run and should all pass.
 
-## Module File Structure
+### Module File Structure
 
 ```js
 // Sample Exercise/index.js
@@ -48,7 +51,7 @@ export {
 };
 ```
 
-## Test File Structure
+### Test File Structure
 
 ```js
 // Sample Exercise/test.js
@@ -60,3 +63,9 @@ describe('Sample Exercise', () => {
   it('should do a thing');
 });
 ```
+
+# Exercises
+
+* [Two Sum](./Two%20Sum)
+* [Reverse Integer](./Reverse%20Integer)
+* [Palindrome Integer](./Palindrome%20Integer)
