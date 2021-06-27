@@ -23,4 +23,23 @@ describe.only('Roman to Integer', () => {
       /^Error: Cannot convert an empty input value.*/,
     );
   });
+
+  it('should throw an error if the input string is longer than 15-characters.', () => {
+    const romanNumerals = 'IIIIVVVVXXXXLCDM';
+
+    assert.throws(
+      () => romanToInteger(romanNumerals),
+      /^Error: Cannot convert string longer than 15-characters.*/,
+    );
+  });
+
+  it('should throw an error if the input is not a string.', () => {
+    const romanNumerals = [0, 'hello', 3.14];
+    assert.throws(
+      () => romanToInteger(romanNumerals),
+      /^Error: Cannot convert a non-string.*/,
+    );
+  });
+
+  it('should throw an error if the input string contains letters that are not Roman numerals.');
 });
