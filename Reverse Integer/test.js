@@ -50,20 +50,22 @@ describe('Reverse Integer', () => {
     assert.strictEqual(actual, expected);
   });
 
-  it('should throw an error if the input is below the minimum inclusive value', () => {
+  it('should return 0 if the input is below the minimum inclusive value', () => {
     const minInclusiveRange = -231;
-    assert.throws(
-      () => reverseInteger(minInclusiveRange - 1),
-      /^Error: Input is outside of 32-bit integer range.*/,
-    );
+    const input = minInclusiveRange - 1;
+    const expected = 0;
+    const actual = reverseInteger(input);
+
+    assert.strictEqual(actual, expected);
   });
 
   it('should throw an error if the input is above the maximum inclusive value', () => {
     const maxInclusiveRange = 231 - 1;
-    assert.throws(
-      () => reverseInteger(maxInclusiveRange + 1),
-      /^Error: Input is outside of 32-bit integer range.*/,
-    );
+    const input = maxInclusiveRange + 1;
+    const expected = 0;
+    const actual = reverseInteger(input);
+
+    assert.strictEqual(actual, expected);
   });
 
   it('should throw an error if the input is not an integer', () => {
