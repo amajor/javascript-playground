@@ -1,6 +1,6 @@
 const reverseInteger = (input) => {
-  const minInclusiveRange = -231;
-  const maxInclusiveRange = 231 - 1;
+  const minInclusiveRange = -(2 ** 31); // -2 raised to the power of 31
+  const maxInclusiveRange = (2 ** 31) - 1; // 2 raised to the power of 31, minus 1
 
   // First check if input is an integer, then check if it is in range.
   if (!Number.isInteger(input)) {

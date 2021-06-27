@@ -1,5 +1,8 @@
 import assert from 'assert';
-import { reverseInteger } from './index.js';
+import {
+  reverseInteger,
+  reverseIntegerVariation,
+} from './index.js';
 
 describe('Reverse Integer', () => {
   it('should return 321 when given 123 (Example 1)', () => {
@@ -34,24 +37,24 @@ describe('Reverse Integer', () => {
     assert.strictEqual(actual, expected);
   });
 
-  it('should return 32 when given 231 - 1', () => {
-    const input = (231 - 1);
-    const expected = 32;
+  it('should return 7463847412 when given (2^31) - 1 (which is 2147483648 - 1)', () => {
+    const input = ((2 ** 31) - 1);
+    const expected = 7463847412;
     const actual = reverseInteger(input);
 
     assert.strictEqual(actual, expected);
   });
 
-  it('should return -132 when given -231', () => {
-    const input = (-231);
-    const expected = -132;
+  it('should return -8463847412 when given -2^31 (which is -2147483648)', () => {
+    const input = (-(2 ** 31));
+    const expected = -8463847412;
     const actual = reverseInteger(input);
 
     assert.strictEqual(actual, expected);
   });
 
   it('should return 0 if the input is below the minimum inclusive value', () => {
-    const minInclusiveRange = -231;
+    const minInclusiveRange = -(2 ** 31);
     const input = minInclusiveRange - 1;
     const expected = 0;
     const actual = reverseInteger(input);
@@ -59,8 +62,8 @@ describe('Reverse Integer', () => {
     assert.strictEqual(actual, expected);
   });
 
-  it('should throw an error if the input is above the maximum inclusive value', () => {
-    const maxInclusiveRange = 231 - 1;
+  it('should return 0 if the input is above the maximum inclusive value', () => {
+    const maxInclusiveRange = (2 ** 31) - 1;
     const input = maxInclusiveRange + 1;
     const expected = 0;
     const actual = reverseInteger(input);
