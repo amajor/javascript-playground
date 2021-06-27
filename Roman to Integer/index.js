@@ -1,5 +1,7 @@
 const romanToInteger = (romanNumeral) => {
-  const romanNumeralsMap = { I: 1, V: 5, X: 10, L: 50, C: 100, D: 500, M: 1000 };
+  const romanNumeralsMap = {
+    I: 1, V: 5, X: 10, L: 50, C: 100, D: 500, M: 1000,
+  };
 
   // Throw an error if the input is not a string.
   if (typeof romanNumeral !== 'string') throw new Error('Cannot convert a non-string.');
@@ -13,12 +15,11 @@ const romanToInteger = (romanNumeral) => {
   const reverseRomanNumArray = [...romanNumeral].reverse();
   return reverseRomanNumArray
     .reduce(
-      (accumulator, currentValue, index, original) =>
-        !index ||
-        romanNumeralsMap[currentValue] >= romanNumeralsMap[original[index - 1]]
-          ? accumulator + romanNumeralsMap[currentValue]
-          : accumulator - romanNumeralsMap[currentValue],
-      0
+      (accumulator, currentValue, index, original) => (!index
+        || romanNumeralsMap[currentValue] >= romanNumeralsMap[original[index - 1]]
+        ? accumulator + romanNumeralsMap[currentValue]
+        : accumulator - romanNumeralsMap[currentValue]),
+      0,
     );
 };
 
