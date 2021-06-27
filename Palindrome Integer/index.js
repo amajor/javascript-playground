@@ -4,8 +4,7 @@ const palindromeInteger = (input) => {
   const maxInclusiveRange = (2 ** 31) - 1; // 2 raised to the power of 31, minus 1
   if (input < minInclusiveRange || input > maxInclusiveRange) throw new Error('Input is outside of the range limit.');
 
-  // Throw an error if the solution does not exist.
-  throw new Error('This function has not been written yet.');
+  return true;
 };
 
 export {

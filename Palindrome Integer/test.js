@@ -2,7 +2,13 @@ import assert from 'assert';
 import { palindromeInteger } from './index.js';
 
 describe.only('Palindrome Integer', () => {
-  it('should return true if the input is 121');
+  it('should return true if the input is 121', () => {
+    const input = 121;
+    const expected = true;
+    const actual = palindromeInteger(input);
+
+    assert.strictEqual(actual, expected);
+  });
 
   it('should return false if the input is -121');
 
