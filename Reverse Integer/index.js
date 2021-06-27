@@ -12,14 +12,14 @@ const reverseInteger = (input) => {
 
   const isNegative = input < 0;
   const numberString = `${Math.abs(input)}`;
-  const stringArray = String(numberString).split("").map((num) => num);
+  const stringArray = String(numberString).split('').map((num) => num);
 
   let newNumberString = isNegative ? '-' : '';
-  for (let i = stringArray.length - 1; i >=0 ; i--) {
+  for (let i = stringArray.length - 1; i >= 0; i -= 1) {
     newNumberString += stringArray[i];
   }
 
-  return parseInt(newNumberString);
+  return parseInt(newNumberString, 10);
 };
 
 export {
