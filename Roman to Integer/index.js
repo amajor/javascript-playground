@@ -11,8 +11,6 @@ const romanToInteger = (romanNumeral) => {
   if (romanNumeral.length > 15) throw new Error('Cannot convert string longer than 15-characters.');
 
   const reverseRomanNumArray = [...romanNumeral].reverse();
-  console.log(`\nreverseRomanNumArray: ${reverseRomanNumArray}`);
-
   return reverseRomanNumArray
     .reduce(
       (accumulator, currentValue, index, original) =>
