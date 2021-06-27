@@ -26,8 +26,21 @@ describe.only('Roman to Integer', () => {
     assert.strictEqual(actual, expected);
   });
 
-  it('should return 58 when provided with an input of `LVIII`.');
-  it('should return 1994 when provided with an input of `MCMXCIV`.');
+  it('should return 58 when provided with an input of `LVIII`.', () => {
+    const romanNumerals = 'LVIII';
+    const expected = 58;
+    const actual = romanToInteger(romanNumerals);
+
+    assert.strictEqual(actual, expected);
+  });
+
+  it('should return 1994 when provided with an input of `MCMXCIV`.', () => {
+    const romanNumerals = 'MCMXCIV';
+    const expected = 1994;
+    const actual = romanToInteger(romanNumerals);
+
+    assert.strictEqual(actual, expected);
+  });
 
   it('should throw an error if the input string is empty.', () => {
     const romanNumerals = '';

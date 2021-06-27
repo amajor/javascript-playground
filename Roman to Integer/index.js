@@ -1,29 +1,27 @@
-const romanToInteger = (romanNumerals) => {
-  // const validRomanNumerals = ['I', 'V', 'X', 'L', 'C', 'D', 'M'];
+const romanToInteger = (romanNumeral) => {
+  const romanNumeralsMap = { I: 1, V: 5, X: 10, L: 50, C: 100, D: 500, M: 1000 };
 
   // Throw an error if the input is not a string.
-  if (typeof romanNumerals !== 'string') throw new Error('Cannot convert a non-string.');
+  if (typeof romanNumeral !== 'string') throw new Error('Cannot convert a non-string.');
 
   // Throw an error if the input is empty.
-  if (romanNumerals === '') throw new Error('Cannot convert an empty input value.');
+  if (romanNumeral === '') throw new Error('Cannot convert an empty input value.');
 
   // Throw an error if the input is longer than 15 characters.
-  if (romanNumerals.length > 15) throw new Error('Cannot convert string longer than 15-characters.');
+  if (romanNumeral.length > 15) throw new Error('Cannot convert string longer than 15-characters.');
 
-  // Count number of I's at beginning of the string.
-  const strArray = romanNumerals.split('');
-  let total = 0;
-  let ones = 0;
-  for (let i = 0; i < strArray.length; i++) {
-    if (strArray[i] === 'I') {
-      total += 1;
-      ones += 1;
-    }
-    if (strArray[i] === 'V') total = 5 - ones;
-    if (strArray[i] === 'X') total = 10 - ones;
-  }
+  const reverseRomanNumArray = [...romanNumeral].reverse();
+  console.log(`\nreverseRomanNumArray: ${reverseRomanNumArray}`);
 
-  return total;
+  return reverseRomanNumArray
+    .reduce(
+      (accumulator, currentValue, index, original) =>
+        !index ||
+        romanNumeralsMap[currentValue] >= romanNumeralsMap[original[index - 1]]
+          ? accumulator + romanNumeralsMap[currentValue]
+          : accumulator - romanNumeralsMap[currentValue],
+      0
+    );
 };
 
 export {
