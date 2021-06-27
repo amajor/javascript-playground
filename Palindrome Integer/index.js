@@ -7,7 +7,10 @@ const palindromeInteger = (input) => {
   // Return false if the number is negative.
   if (input < 0) return false;
 
-  return true;
+  // Reverse the number.
+  const reversedNumber = parseInt(`${input}`.split('').reverse().join(''), 10);
+
+  return input === reversedNumber;
 };
 
 export {

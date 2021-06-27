@@ -18,7 +18,13 @@ describe.only('Palindrome Integer', () => {
     assert.strictEqual(actual, expected);
   });
 
-  it('should return false if the input is 10 (Example 3)');
+  it('should return false if the input is 10 (Example 3)', () => {
+    const input = 10;
+    const expected = false;
+    const actual = palindromeInteger(input);
+
+    assert.strictEqual(actual, expected);
+  });
 
   it('should return false if the input is -101 (Example 4)');
 
