@@ -9,6 +9,9 @@ read -p 'Function Name (in "pascalCase", please): ' functionName
 # Create a new directory, named for the new exercise.
 mkdir "${exerciseName}"
 
+# Append this exercise to the root-level README file.
+echo "* [${exerciseName}](./${exerciseName// /%20})" >> README.md
+
 # Go into that directory.
 cd "${exerciseName}"
 
