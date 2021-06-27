@@ -11,7 +11,16 @@ const reverseInteger = (input) => {
     throw new Error('Input is outside of 32-bit integer range.');
   }
 
-  return 321;
+  const isNegative = input < 0;
+  const numberString = `${Math.abs(input)}`;
+  const stringArray = String(numberString).split("").map((num) => num);
+
+  let newNumberString = isNegative ? '-' : '';
+  for (let i = stringArray.length - 1; i >=0 ; i--) {
+    newNumberString += stringArray[i];
+  }
+
+  return parseInt(newNumberString);
 };
 
 export {

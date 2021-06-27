@@ -10,7 +10,13 @@ describe('Reverse Integer', () => {
     assert.strictEqual(actual, expected);
   });
 
-  it('should return -321 when given -123 (Example 2)');
+  it('should return -321 when given -123 (Example 2)', () => {
+    const input = -123;
+    const expected = -321;
+    const actual = reverseInteger(input);
+
+    assert.strictEqual(actual, expected);
+  });
 
   it('should return 21 when given 120 (Example 3)');
 
