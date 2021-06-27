@@ -34,6 +34,22 @@ describe.only('Palindrome Integer', () => {
     assert.strictEqual(actual, expected);
   });
 
+  it('should return true if the input is 123454321', () => {
+    const input = 123454321;
+    const expected = true;
+    const actual = palindromeInteger(input);
+
+    assert.strictEqual(actual, expected);
+  });
+
+  it('should return true if the input is 123454321', () => {
+    const input = 2147337412;
+    const expected = true;
+    const actual = palindromeInteger(input);
+
+    assert.strictEqual(actual, expected);
+  });
+
   it('should return false if the input is not an integer', () => {
     const theFloat = 1.2;
     const theString = 'hello world';
