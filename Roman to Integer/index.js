@@ -20,6 +20,7 @@ const romanToInteger = (romanNumerals) => {
       ones += 1;
     }
     if (strArray[i] === 'V') total = 5 - ones;
+    if (strArray[i] === 'X') total = 10 - ones;
   }
 
   return total;

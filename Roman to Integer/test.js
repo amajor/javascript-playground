@@ -18,7 +18,14 @@ describe.only('Roman to Integer', () => {
     assert.strictEqual(actual, expected);
   });
 
-  it('should return 9 when provided with an input of `IX`.');
+  it('should return 9 when provided with an input of `IX`.', () => {
+    const romanNumerals = 'IX';
+    const expected = 9;
+    const actual = romanToInteger(romanNumerals);
+
+    assert.strictEqual(actual, expected);
+  });
+
   it('should return 58 when provided with an input of `LVIII`.');
   it('should return 1994 when provided with an input of `MCMXCIV`.');
 
