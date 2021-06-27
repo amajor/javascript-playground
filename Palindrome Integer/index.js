@@ -30,14 +30,14 @@ const palindromeIntegerVariation = (input) => {
   let inputNumber = input;
   while (inputNumber > reversedNumber) {
     reversedNumber = (reversedNumber * 10) + (inputNumber % 10);
-    inputNumber /= 10;
+    inputNumber = Math.floor(inputNumber / 10);
   }
 
   // When the length is an odd number, we can get rid of the middle digit by reversedNumber/10
   // When the input is 12321, at the end of the loop we get inputNumber = 12, reversedNumber = 123.
   // The middle digit doesn't matter in palidrome (it will always equal to itself);
   // we can simply get rid of it.
-  return inputNumber === reversedNumber || inputNumber === reversedNumber / 10;
+  return inputNumber === reversedNumber || inputNumber === Math.floor(reversedNumber / 10);
 };
 
 export {

@@ -4,7 +4,7 @@ import {
   palindromeIntegerVariation,
 } from './index.js';
 
-describe.only('Palindrome Integer', () => {
+describe('Palindrome Integer', () => {
   it('should return true if the input is 121 (Example 1)', () => {
     const input = 121;
     const expected = true;
@@ -89,7 +89,7 @@ describe.only('Palindrome Integer', () => {
   });
 });
 
-describe.only('Palindrome Integer Variation', () => {
+describe('Palindrome Integer Variation', () => {
   it('should return true if the input is 121 (Example 1)', () => {
     const input = 121;
     const expected = true;
