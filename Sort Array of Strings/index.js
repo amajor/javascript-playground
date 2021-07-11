@@ -25,7 +25,10 @@ const sortByPopularity = (inputArray) => {
   return inputArray;
 };
 
-const fullSortAndCleanup = (inputArray) => inputArray;
+const fullSortAndCleanup = (inputArray) => {
+  const sortedArray = sortByPopularity(inputArray);
+  return sortedArray;
+};
 
 export {
   getProductName,

@@ -9,11 +9,28 @@ import {
 } from './index.js';
 
 describe.only('Sort Array of Strings', () => {
-  // it('should return a sorted array of product names', () => {
-  //   const expected = OUTPUT;
-  //   const actual = fullSortAndCleanup(INPUT);
-  //   assert.deepStrictEqual(actual, expected);
-  // });
+  describe('Cleaned Output Array', () => {
+    // it('should return a sorted array of product names', () => {
+    //   const expected = OUTPUT;
+    //   const actual = fullSortAndCleanup(INPUT);
+    //   assert.deepStrictEqual(actual, expected);
+    // });
+
+    it('should return only the names of the sorted array', () => {
+      const noEqualPopularities = [
+        'Red Ball,98,5',
+        'Green Ball,48,6',
+        'Blue Ball,90,4',
+      ]
+      const expected = [
+        'Red Ball',
+        'Blue Ball',
+        'Green Ball',
+      ];
+      const actual = fullSortAndCleanup(noEqualPopularities);
+      assert.deepStrictEqual(actual, expected);
+    });
+  });
 
   describe('Get Product Name', () => {
     it('should return the product name "Red Ball" from the string "Red Ball,98,5"', () => {
