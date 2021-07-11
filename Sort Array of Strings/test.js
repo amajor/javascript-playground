@@ -4,6 +4,7 @@ import {
   getProductName,
   getProductPopularity,
   getProductPrice,
+  sortByPopularity,
   fullSortAndCleanup,
 } from './index.js';
 
@@ -69,7 +70,20 @@ describe.only('Sort Array of Strings', () => {
   });
 
   describe('Sort by Popularity', () => {
-    it('needs tests to be written');
+    it('needs tests to be written', () => {
+      const inputArray = [
+        'Red Ball,98,5',
+        'Green Ball,48,6',
+        'Blue Ball,90,4',
+      ];
+      const expected = [
+        'Red Ball,98,5',
+        'Blue Ball,90,4',
+        'Green Ball,48,6',
+      ];
+      const actual = sortByPopularity(inputArray);
+      assert.deepStrictEqual(actual, expected);
+    });
   });
 
   describe('Sort by Price', () => {
