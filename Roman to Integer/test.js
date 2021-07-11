@@ -1,7 +1,7 @@
 import assert from 'assert';
 import { romanToInteger } from './index.js';
 
-describe.only('Roman to Integer', () => {
+describe('Roman to Integer', () => {
   it('should return 3 when provided with an input of `III`', () => {
     const romanNumerals = 'III';
     const expected = 3;
