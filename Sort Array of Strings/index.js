@@ -1,5 +1,6 @@
 const getProductName = (inputString) => {
-  return inputString;
+  const words = inputString.split(',');
+  return words[0];
 };
 
 const fullSortAndCleanup = (inputArray) => {
