@@ -5,6 +5,7 @@ import {
   getProductPopularity,
   getProductPrice,
   sortByPopularity,
+  cleanArrayToOnlyNames,
   fullSortAndCleanup,
 } from './index.js';
 
@@ -21,7 +22,7 @@ describe.only('Sort Array of Strings', () => {
         'Red Ball,98,5',
         'Green Ball,48,6',
         'Blue Ball,90,4',
-      ]
+      ];
       const expected = [
         'Red Ball',
         'Blue Ball',
@@ -105,5 +106,22 @@ describe.only('Sort Array of Strings', () => {
 
   describe('Sort by Price', () => {
     it('needs tests to be written');
+  });
+
+  describe('Clean Array to Only Names', () => {
+    it('should return an array of only names', () => {
+      const inputArray = [
+        'A Product,98,5',
+        'B Product,48,6',
+        'C Product,90,4',
+      ];
+      const expected = [
+        'A Product',
+        'B Product',
+        'C Product',
+      ];
+      const actual = cleanArrayToOnlyNames(inputArray);
+      assert.deepStrictEqual(actual, expected);
+    });
   });
 });

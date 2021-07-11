@@ -25,9 +25,17 @@ const sortByPopularity = (inputArray) => {
   return inputArray;
 };
 
+const cleanArrayToOnlyNames = (inputArray) => {
+  const outputArray = [];
+  for (let i = 0; i < inputArray.length; i++) {
+    outputArray.push(getProductName(inputArray[i]));
+  }
+  return outputArray;
+};
+
 const fullSortAndCleanup = (inputArray) => {
   const sortedArray = sortByPopularity(inputArray);
-  return sortedArray;
+  return cleanArrayToOnlyNames(sortedArray);
 };
 
 export {
@@ -35,5 +43,6 @@ export {
   getProductPopularity,
   getProductPrice,
   sortByPopularity,
+  cleanArrayToOnlyNames,
   fullSortAndCleanup,
 };
