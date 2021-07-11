@@ -25,6 +25,14 @@ const sortByPopularity = (inputArray) => {
   return inputArray;
 };
 
+const compareProductByPrice = (productStringA, productStringB) => {
+  const priceA = getProductPrice(productStringA);
+  const priceB = getProductPrice(productStringB);
+  // If (priceA - priceB) returns a value > than 0, sort b before a.
+  // If (priceA - priceB) returns a value ≤ 0, leave a and b in the same order.
+  return priceA - priceB;
+}
+
 const cleanArrayToOnlyNames = (inputArray) => {
   const outputArray = [];
   for (let i = 0; i < inputArray.length; i++) {
@@ -42,6 +50,7 @@ export {
   getProductName,
   getProductPopularity,
   getProductPrice,
+  compareProductByPrice,
   sortByPopularity,
   cleanArrayToOnlyNames,
   fullSortAndCleanup,

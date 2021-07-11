@@ -4,6 +4,7 @@ import {
   getProductName,
   getProductPopularity,
   getProductPrice,
+  compareProductByPrice,
   sortByPopularity,
   cleanArrayToOnlyNames,
   fullSortAndCleanup,
@@ -105,7 +106,27 @@ describe.only('Sort Array of Strings', () => {
   });
 
   describe('Sort by Price', () => {
-    it('needs tests to be written');
+    it('should return -1 if the price of A is smaller', () => {
+      const productStringA = 'A Product,98,5';
+      const productStringB = 'B Product,48,6';
+      const expected = -1;
+      const actual = compareProductByPrice(productStringA, productStringB);
+      assert.strictEqual(actual, expected);
+    });
+    it('should return 1 if the price of A is larger', () => {
+      const productStringA = 'A Product,98,7';
+      const productStringB = 'B Product,48,6';
+      const expected = 1;
+      const actual = compareProductByPrice(productStringA, productStringB);
+      assert.strictEqual(actual, expected);
+    });
+    it('should return 0 if the price or A equals the price of B', () => {
+      const productStringA = 'A Product,98,5';
+      const productStringB = 'B Product,48,5';
+      const expected = 0;
+      const actual = compareProductByPrice(productStringA, productStringB);
+      assert.strictEqual(actual, expected);
+    });
   });
 
   describe('Clean Array to Only Names', () => {
