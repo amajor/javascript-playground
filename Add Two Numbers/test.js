@@ -1,7 +1,7 @@
 import assert from 'assert';
 import { addTwoNumbers } from './index.js';
 
-describe.only('Add Two Numbers', () => {
+describe('Add Two Numbers', () => {
   it('should return [7,0,8] with inputs [2,4,3] and [5,6,4].', () => {
     const listOne = [2, 4, 3];
     const listTwo = [5, 6, 4];
