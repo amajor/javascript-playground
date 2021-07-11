@@ -5,18 +5,18 @@ import {
   getProductPopularity,
   getProductPrice,
   compareProductByPrice,
-  sortByPopularity,
+  sortByPopularityAndPrice,
   cleanArrayToOnlyNames,
   fullSortAndCleanup,
 } from './index.js';
 
 describe.only('Sort Array of Strings', () => {
   describe('Cleaned Output Array', () => {
-    // it('should return a sorted array of product names', () => {
-    //   const expected = OUTPUT;
-    //   const actual = fullSortAndCleanup(INPUT);
-    //   assert.deepStrictEqual(actual, expected);
-    // });
+    it('should return a sorted array of product names', () => {
+      const expected = OUTPUT;
+      const actual = fullSortAndCleanup(INPUT);
+      assert.deepStrictEqual(actual, expected);
+    });
 
     it('should return only the names of the sorted array', () => {
       const noEqualPopularities = [
@@ -100,7 +100,7 @@ describe.only('Sort Array of Strings', () => {
         'Blue Ball,90,4',
         'Green Ball,48,6',
       ];
-      const actual = sortByPopularity(inputArray);
+      const actual = sortByPopularityAndPrice(inputArray);
       assert.deepStrictEqual(actual, expected);
     });
   });
