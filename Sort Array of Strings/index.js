@@ -3,11 +3,16 @@ const getProductName = (inputString) => {
   return words[0];
 };
 
+const getProductPopularity = (inputString) => {
+  return inputString;
+};
+
 const fullSortAndCleanup = (inputArray) => {
   return inputArray;
 };
 
 export {
   getProductName,
+  getProductPopularity,
   fullSortAndCleanup,
 };
