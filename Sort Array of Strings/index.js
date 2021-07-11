@@ -4,12 +4,11 @@ const getProductName = (inputString) => {
 };
 
 const getProductPopularity = (inputString) => {
-  return inputString;
+  const words = inputString.split(',');
+  return parseInt(words[1], 10);
 };
 
-const fullSortAndCleanup = (inputArray) => {
-  return inputArray;
-};
+const fullSortAndCleanup = (inputArray) => inputArray;
 
 export {
   getProductName,
