@@ -3,6 +3,7 @@ import { INPUT, OUTPUT } from './data.js';
 import {
   getProductName,
   getProductPopularity,
+  getProductPrice,
   fullSortAndCleanup,
 } from './index.js';
 
@@ -50,9 +51,21 @@ describe.only('Sort Array of Strings', () => {
   });
 
   describe('Get Product Price', () => {
-    it('should return the product price 5 from the string "Red Ball,98,5"');
-    it('should return the product price 4 from the string "Blue Ball,90,4"');
-    it('should return the product price 6 from the string "Green Ball,48,6"');
+    it('should return the product price 5 from the string "Red Ball,98,5"', () => {
+      const expected = 5;
+      const actual = getProductPrice('Red Ball,98,5');
+      assert.strictEqual(actual, expected);
+    });
+    it('should return the product price 4 from the string "Blue Ball,90,4"', () => {
+      const expected = 4;
+      const actual = getProductPrice('Blue Ball,90,4');
+      assert.strictEqual(actual, expected);
+    });
+    it('should return the product price 6 from the string "Green Ball,48,6"', () => {
+      const expected = 6;
+      const actual = getProductPrice('Green Ball,48,6');
+      assert.strictEqual(actual, expected);
+    });
   });
 
   describe('Sort by Popularity', () => {

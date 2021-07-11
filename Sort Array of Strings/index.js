@@ -8,10 +8,15 @@ const getProductPopularity = (inputString) => {
   return parseInt(words[1], 10);
 };
 
+const getProductPrice = (inputString) => {
+  return inputString;
+}
+
 const fullSortAndCleanup = (inputArray) => inputArray;
 
 export {
   getProductName,
   getProductPopularity,
+  getProductPrice,
   fullSortAndCleanup,
 };
