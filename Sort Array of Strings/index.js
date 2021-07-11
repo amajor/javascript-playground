@@ -9,7 +9,8 @@ const getProductPopularity = (inputString) => {
 };
 
 const getProductPrice = (inputString) => {
-  return inputString;
+  const words = inputString.split(',');
+  return parseInt(words[2], 10);
 }
 
 const fullSortAndCleanup = (inputArray) => inputArray;
